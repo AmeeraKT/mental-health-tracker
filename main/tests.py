@@ -13,7 +13,6 @@ class MainTest(TestCase):
         self.client.login(username='cat', password='12345678meow') # log in as cat
         self.client.cookies['last_login'] = '2024-09-20T12:34:56' # cookie sample
 
-
     def test_main_url_is_exist(self):
         response = self.client.get('')
         self.assertEqual(response.status_code, 200)
