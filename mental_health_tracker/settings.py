@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+
 ]
 
 MIDDLEWARE = [
@@ -121,9 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/' 
 if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / 'static' # refers to /static root project in development mode
-    ]
+    STATICFILES_DIRS = [ BASE_DIR / 'static' ] # refers to /static root project in development mode
+
 else:
     STATIC_ROOT = BASE_DIR / 'static' # refers to /static root project in production mode
 
