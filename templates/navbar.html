@@ -7,7 +7,7 @@
       <div class="hidden md:flex items-center">
         {% if user.is_authenticated %}
           <span class="text-gray-300 mr-4">Welcome, {{ user.username }}</span>
-          <a href="{% url 'main:logout' %}" class="text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          <a href="{% url 'main:logout' %}" class="text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300">
             Logout
           </a>
         {% else %}
@@ -28,12 +28,13 @@
       </div>
     </div>
   </div>
+
   <!-- Mobile menu -->
   <div class="mobile-menu hidden md:hidden  px-4 w-full md:max-w-full">
     <div class="pt-2 pb-3 space-y-1 mx-auto">
       {% if user.is_authenticated %}
         <span class="block text-gray-300 px-3 py-2">Welcome, {{ user.username }}</span>
-        <a href="{% url 'main:logout' %}" class="block text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+        <a href="{% url 'main:logout' %}" class="block text-center bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded transition duration-300">
           Logout
         </a>
       {% else %}
